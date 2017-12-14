@@ -127,4 +127,8 @@ public class RedBlackTrees {
 			root.color = false; // root is black
 		}
 	}
+	
+	public void delete(int item) {
+		
+	}
 }
