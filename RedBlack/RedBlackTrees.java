@@ -72,7 +72,7 @@ public class RedBlackTrees {
 	public void insert(int item) {
 		BST newnode = new BST(item);
 		BST node = root, parent = null;
-		while (node != null) {
+		while (node != null) { //find a place to insert newnode
 			if (item < node.data)
 				node = node.left;
 			else
