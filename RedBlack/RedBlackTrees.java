@@ -72,7 +72,7 @@ public class RedBlackTrees {
 	public void insert(int item) {
 		BST newnode = new BST(item);
 		BST node = root, parent = null;
-		while (node != null) { //find a place to insert newnode
+		while (node != null) { // find a place to insert newnode
 			if (item < node.data)
 				node = node.left;
 			else
@@ -127,7 +127,17 @@ public class RedBlackTrees {
 			root.color = false; // root is black
 		}
 	}
-	
+
+	private void transplant(BST node1, BST node2) {
+		if (node1.parent == null)
+			this.root = node2;
+		else if (node1 == node1.parent.left)
+			node1.parent.left = node2;
+		else
+			node1.parent.right = node2;
+		node2.parent = node1.parent;
+	}
+
 	public void delete(int item) {
 		
 	}
