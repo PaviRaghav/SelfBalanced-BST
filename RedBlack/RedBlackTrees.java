@@ -139,6 +139,6 @@ public class RedBlackTrees {
 	}
 
 	public void delete(int item) {
-		
+		//delete one node, then readjust to maintain red-black
 	}
 }
